@@ -1,11 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <title>My Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    
+
+
+<div class="navbar">
+  <img src="logo.png" alt="Logo" class="logo">
+
+  <div class="menu">
+    <button onclick="scrollToSection('home')">Home</button>
+    <button onclick="scrollToSection('about')">Our Profile</button>
+    <button onclick="scrollToSection('portofolio')">Portofolio</button>
+    <button onclick="scrollToSection('message')">Message Us</button>
+  </div>
+</div>
+
+
+<div class="banner" id="home">
+  <div class="banner-overlay">
+    <div class="banner-text">
+      <h2 id="welcomeText">Hi there, welcome to PT NgodingSantuy</h2>
+      <p>Solusi digital sederhana untuk kebutuhan Anda</p>
+      <button class="primary-btn">Learn More</button>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="about">
+  <h3>About PT NgodingSantuy</h3>
+  <p>
+    PT Ngoding Santuy adalah perusahaan teknologi yang berfokus pada
+    pengembangan perangkat lunak dan edukasi digital.
+    Kami hadir untuk memberikan solusi teknologi yang sederhana,
+    efektif, dan mudah dipahami oleh semua kalangan.
+  </p>
+
+  <h3>Vision & Mission</h3>
+
+  <p><strong>Vision</strong></p>
+  <p>
+    Menjadi perusahaan teknologi yang memberikan dampak positif
+    melalui solusi digital yang humanis dan berkelanjutan.
+  </p>
+
+  <p><strong>Mission</strong></p>
+  <ul>
+    <li>Mengembangkan aplikasi yang mudah digunakan dan efisien.</li>
+    <li>Menyediakan edukasi digital yang praktis dan relevan.</li>
+    <li>Menciptakan lingkungan kerja yang sehat dan kolaboratif.</li>
+  </ul>
+
+  <h3>Slogan</h3>
+  <p style=" margin-bottom: 20px;"><em>"Ngoding Santuy, Solusi Mantap."</em></p>
+
+  <h3 style="text-align:center; max-width:700px; margin: 0 auto 40px;">Our Headquarter</h3>
+
+  <div class="hq">
+    <div class="circle">
+      <div class="dot">
+        <img src="jakarta.jpg" alt="Jakarta">
+      </div>
+      <p>Jakarta</p>
+    </div>
+
+    <div class="circle">
+      <div class="dot">
+        <img src="mdo.jpeg" alt="Manado">
+      </div>
+      <p>Manado</p>
+    </div>
+
+    <div class="circle">
+      <div class="dot">
+        <img src="papua.jpeg" alt="Papua">
+      </div>
+      <p style=" margin-bottom: 20px;">Papua</p>
+    </div>
+  </div>
+ 
+  <div id="portofolio"></div>
+  <h2 style="text-align:center; max-width:700px; margin: 0 auto 40px;">Our Portfolio</h2>
+  <p style="text-align:center; max-width:700px; margin: 0 auto 40px;">
+    Beberapa proyek yang telah kami kerjakan sebagai solusi digital
+    yang sederhana, efektif, dan berdampak.
+  </p>
+
+  <div class="portfolio-grid">
+    <div class="portfolio-card">
+      <h4>Project 1</h4>
+      <h4>Aplikasi Rumah Sakit</h4>
+      <p>Sistem pendataan dan perhitungan indikator pelayanan rumah sakit.</p>
+    </div>
+
+    <div class="portfolio-card">
+      <h4>Project 2</h4>
+      <h4>Website Company Profile</h4>
+      <p>Website profesional untuk branding dan informasi perusahaan.</p>
+    </div>
+
+    <div class="portfolio-card">
+       <h4>Project 3</h4>
+      <h4>Aplikasi Edukasi</h4>
+      <p>Platform pembelajaran digital yang mudah digunakan.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="section" id="message">
+  <h3>Message Us</h3>
+
+  <div class="form-container">
+    <form id="messageForm">
+      <label>Nama</label>
+      <input type="text" id="name" required>
+
+      <label>Tanggal Lahir</label>
+      <input type="date" id="birth" required>
+
+      <label>Jenis Kelamin</label>
+      <div class="radio">
+        <input type="radio" name="gender" value="Laki-laki" required> Laki-laki
+        <input type="radio" name="gender" value="Perempuan"> Perempuan
+      </div>
+
+      <label>Pesan</label>
+      <textarea id="message"></textarea>
+
+      <button type="submit">Kirim</button>
+    </form>
+
+    <div class="result-box" id="result"></div>
+  </div>
+</div>
+
+<footer>
+  Created By NgodingSantuy
+</footer>
+
+<script src="js/script.js"></script>
+
+<script>
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+</script>
+
 </body>
 </html>
